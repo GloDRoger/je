@@ -1,7 +1,9 @@
 /// <reference types="vite/client" />
+/// <reference types="unplugin-vue-router/client" />
 
-declare module 'vue-router/auto-routes' {
-  import type { RouteRecordRaw } from 'vue-router';
+declare module '*.vue' {
+  import type { DefineComponent } from 'vue'
 
-  export const routes: RouteRecordRaw[];
+  const component: DefineComponent<object, object, any>
+  export default component
 }

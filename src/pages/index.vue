@@ -1,9 +1,17 @@
 <script setup lang='ts' name=''>
-// 123
+const productInfo = ref({
+  name: 'Jarressa-Estate-Pink-Moscato-South-Australia-2019',
+  price: '19.90',
+  stock: 100,
+  cate: 'je',
+  pic: 'Jarressa-Estate-Pink-Moscato-South-Australia-2019.png',
+})
 </script>
 
 <template>
-  <div class="text-[red]">home</div>
+  <div>
+    <AppProductCard class="w-300" :data="productInfo" />
+  </div>
 </template>
 
 <style lang='scss' scoped></style>
