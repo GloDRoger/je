@@ -1,0 +1,19 @@
+/* 呼吸灯 */
+.breathing-light {
+  animation: Breathing 2s ease-in-out infinite;
+}
+
+@keyframes Breathing {
+  0% {
+    box-shadow: 0 0 3px 0 #32ffce;
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 12px 0 #32ffce;
+    transform: scale(1.1);
+  }
+  100% {
+    box-shadow: 0 0 3px 0 #32ffce;
+    transform: scale(1);
+  }
+}

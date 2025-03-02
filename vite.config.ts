@@ -22,6 +22,7 @@ export default defineConfig({
     }],
   },
   plugins: [
+
     VueRouter(),
     vue(),
     Layouts(),
