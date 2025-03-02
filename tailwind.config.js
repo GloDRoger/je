@@ -6,6 +6,7 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: [],
       spacing: Object.fromEntries(
         Array.from({ length: 2000 }, (_, i) => [i + 1, `${i + 1}px`]),
       ),
