@@ -3,9 +3,7 @@
 </script>
 
 <template>
-  <AppHeader />
-  <router-view class="w-full"></router-view>
-  <AppFooter />
+<div>about</div>
 </template>
 
 <style lang='scss' scoped></style>

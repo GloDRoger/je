@@ -3,9 +3,7 @@
 </script>
 
 <template>
-  <AppHeader />
-  <router-view class="w-full"></router-view>
-  <AppFooter />
+<div>harold</div>
 </template>
 
 <style lang='scss' scoped></style>

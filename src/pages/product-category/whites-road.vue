@@ -3,9 +3,7 @@
 </script>
 
 <template>
-  <AppHeader />
-  <router-view class="w-full"></router-view>
-  <AppFooter />
+<div>whites-road</div>
 </template>
 
 <style lang='scss' scoped></style>

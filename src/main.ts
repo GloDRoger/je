@@ -1,5 +1,9 @@
 import { createApp } from 'vue'
-import '@/css/main.css'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+import 'virtual:svg-icons-register'
+import '@/css/index.css'
+
+const app = createApp(App)
+installModule(app)
+app.mount('#app')

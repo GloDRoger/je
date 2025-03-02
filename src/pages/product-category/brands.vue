@@ -3,9 +3,7 @@
 </script>
 
 <template>
-  <AppHeader />
-  <router-view class="w-full"></router-view>
-  <AppFooter />
+<div>No products were found matching your selection.</div>
 </template>
 
 <style lang='scss' scoped></style>

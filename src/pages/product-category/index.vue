@@ -3,9 +3,7 @@
 </script>
 
 <template>
-  <AppHeader />
-  <router-view class="w-full"></router-view>
-  <AppFooter />
+<div>product-category iner</div>
 </template>
 
 <style lang='scss' scoped></style>
