@@ -12,6 +12,8 @@ export default {
       ),
       colors: {
         'prime': '#303030',
+        'secondary': '#1abc9c',
+        'je-text': '#888',
       },
       backgroundImage: {
         // 'hero-box': 'linear-gradient(135deg, #1F262C, #121418);',

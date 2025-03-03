@@ -16,11 +16,9 @@ const _src = computed(() => `/img${props.src}`)
 </template>
 
 <style lang='scss' scoped>
-img{
-  width: 100%;
+img {
   display: block;
-  transition: opacity .3sease-out;
+  transition: opacity .3s ease-out;
   transform: translateZ(0);
-  margin: 0 auto;
 }
 </style>
