@@ -16,8 +16,8 @@ withDefaults(defineProps<Props>(), {
 <style lang='scss' scoped>
 button {
   font-size: 13px;
-  border: 2px solid #303030;
-  color: #303030;
+  border: 2px solid var(--je-prime-color);
+  color: var(--je-prime-color);
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 0 17px;
@@ -26,8 +26,8 @@ button {
   transition: all .1s linear;
 
   &:hover {
-    background-color: #1abc9c;
-    border-color: #1abc9c;
+    background-color: var(--je-secondary-color);
+    border-color: var(--je-secondary-color);
     color: #fff;
   }
 }
