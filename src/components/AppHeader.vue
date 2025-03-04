@@ -37,14 +37,14 @@ function toggleMenu() {
 function toggleChild(i: number) {
   menuList.value[i].childrenIsOpen = !menuList.value[i].childrenIsOpen
 }
-const enter = (el) => {
+const enter = (el:any) => {
   el.style.height = "0px";
   nextTick(() => {
     el.style.height = el.scrollHeight + "px";
   });
 };
 
-const leave = (el) => {
+const leave = (el:any) => {
   el.style.height = el.scrollHeight + "px";
   nextTick(() => {
     el.style.height = "0px";
