@@ -10,7 +10,7 @@ const productInfo = ref({
 
 <template>
   <div>
-    <AppProductCard class="w-300" :data="productInfo" />
+    <AppBanner />
   </div>
 </template>
 

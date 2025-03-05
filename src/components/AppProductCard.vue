@@ -10,7 +10,7 @@ interface Props {
 }
 const props = defineProps<Props>()
 
-const _imgSrc = computed(() => `/${props.data.cate}/${props.data.pic}`)
+const _imgSrc = computed(() => `/wine/${props.data.cate}/${props.data.pic}`)
 </script>
 
 <template>
@@ -23,7 +23,8 @@ const _imgSrc = computed(() => `/${props.data.cate}/${props.data.pic}`)
     </div>
     <div class="h-full pt-8">
       <h6
-        class="font-bold uppercase px-15 tracking-[1px] mt-7 text-center duration-[0.3s] ease-in-out leading-[1.5] text-[13px] text-prime">
+        class="font-bold uppercase px-15 tracking-[1px] mt-7 text-center duration-[0.3s] ease-in-out leading-[1.5] text-[13px] text-prime"
+>
         {{ data.name }}
       </h6>
       <div class="text-center h-26 mb-16">
