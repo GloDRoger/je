@@ -37,27 +37,28 @@ function toggleMenu() {
 function toggleChild(i: number) {
   menuList.value[i].childrenIsOpen = !menuList.value[i].childrenIsOpen
 }
-const enter = (el:any) => {
-  el.style.height = "0px";
+function enter(el: any) {
+  el.style.height = '0px';
   nextTick(() => {
-    el.style.height = el.scrollHeight + "px";
+    el.style.height = `${el.scrollHeight}px`;
   });
-};
+}
 
-const leave = (el:any) => {
-  el.style.height = el.scrollHeight + "px";
+function leave(el: any) {
+  el.style.height = `${el.scrollHeight}px`;
   nextTick(() => {
-    el.style.height = "0px";
+    el.style.height = '0px';
   });
-};
+}
 </script>
 
 <template>
-  <div class="w-full px-15">
+  <div class="w-full px-15 bg-white">
     <div class="relative w-full h-100">
       <div
         class="absolute cursor-pointer flex left-0 top-[50%] translate-y-[-50%] items-center py-10 pr-10 justify-center text-[12px]"
-        @click="toggleMenu">
+        @click="toggleMenu"
+>
         <BaseIcon name="bars" />
       </div>
       <div class="h-100 flex items-center justify-center w-full">
@@ -65,23 +66,30 @@ const leave = (el:any) => {
       </div>
     </div>
     <!-- menu -->
-    <Transition name="scale" >
-      <div v-show="showMenu"
-        class="w-full overflow-hidden flex flex-col">
+    <Transition name="scale">
+      <div
+v-show="showMenu"
+        class="w-full overflow-hidden flex flex-col"
+>
         <div v-for="item, i in menuList" :key="item.name" class="flex flex-col">
           <div
-            class="flex items-center duration-200 ease hover:text-secondary cursor-pointer justify-between border-solid border-b-[1px] border-[#eaeaea] text-[13px] text-je-text leading-[26px] py-10">
+            class="flex items-center duration-200 ease hover:text-secondary cursor-pointer justify-between border-solid border-b-[1px] border-[#eaeaea] text-[13px] text-je-text leading-[26px] py-10"
+>
             <span class="capitalize">{{ item.name }}</span>
-            <div @click.stop="toggleChild(i)" v-if="item.children.length > 0" class="pl-10 py-10 flex items-center text-[9px]"
-              :class="[item.childrenIsOpen ? 'rotate-90' : '']">
+            <div
+v-if="item.children.length > 0" class="pl-10 py-10 flex items-center text-[9px]" :class="[item.childrenIsOpen ? 'rotate-90' : '']"
+              @click.stop="toggleChild(i)"
+>
               <BaseIcon name="arrow" />
             </div>
           </div>
           <!-- children -->
           <Transition name="expand" @enter="enter" @leave="leave">
             <div v-show="item.childrenIsOpen" class="overflow-hidden">
-              <div v-for="c in item.children" :key="c.name"
-                class="ml-20 cursor-pointer border-solid duration-200 ease hover:text-secondary border-b-[1px] border-[#eaeaea] text-[13px] text-je-text leading-[26px] py-10">
+              <div
+v-for="c in item.children" :key="c.name"
+                class="ml-20 cursor-pointer border-solid duration-200 ease hover:text-secondary border-b-[1px] border-[#eaeaea] text-[13px] text-je-text leading-[26px] py-10"
+>
                 <span class="capitalize">{{ c.name }}</span>
               </div>
             </div>
